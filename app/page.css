@@ -1,0 +1,322 @@
+
+@reference "tailwindcss";
+
+.dashboard {
+  @apply flex min-h-screen bg-slate-50 text-slate-800;
+}
+
+.sidebar {
+  @apply flex w-64 shrink-0 flex-col border-r border-slate-200 bg-white p-6;
+}
+
+.logo {
+  @apply flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900 no-underline;
+}
+
+.logo-mark {
+  @apply flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-xl text-white;
+}
+
+.sidebar-caption {
+  @apply mb-3 mt-10 text-xs font-semibold tracking-widest text-slate-400;
+}
+
+.navigation {
+  @apply flex flex-col gap-2;
+}
+
+.nav-link {
+  @apply flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-500 transition-colors;
+}
+
+.nav-link:hover {
+  @apply bg-slate-50 text-slate-900;
+}
+
+.nav-link.active {
+  @apply bg-indigo-50 text-indigo-700;
+}
+
+.nav-icon {
+  @apply flex w-5 items-center justify-center text-lg;
+}
+
+.sidebar-bottom {
+  @apply mt-auto flex items-center gap-3 border-t border-slate-100 pt-6;
+}
+
+.profile-avatar {
+  @apply flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 text-sm font-bold text-indigo-700;
+}
+
+.profile-name {
+  @apply text-sm font-semibold text-slate-800;
+}
+
+.profile-caption {
+  @apply mt-1 text-xs text-slate-500;
+}
+
+.main-content {
+  @apply min-w-0 flex-1 p-5 sm:p-8 lg:p-10;
+}
+
+.topbar {
+  @apply flex flex-wrap items-center justify-between gap-5;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold tracking-widest text-indigo-600;
+}
+
+.page-title {
+  @apply mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl;
+}
+
+.page-subtitle {
+  @apply mt-2 text-sm text-slate-500 sm:text-base;
+}
+
+.today-badge {
+  @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600;
+}
+
+.status-dot {
+  @apply h-2 w-2 rounded-full bg-emerald-500;
+}
+
+.summary-grid {
+  @apply mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3;
+}
+
+.summary-card {
+  @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md sm:p-6;
+}
+
+.summary-icon {
+  @apply mb-5 flex h-10 w-10 items-center justify-center rounded-xl text-lg font-bold;
+}
+
+.summary-icon.purple {
+  @apply bg-indigo-50 text-indigo-600;
+}
+
+.summary-icon.green {
+  @apply bg-emerald-50 text-emerald-600;
+}
+
+.summary-icon.orange {
+  @apply bg-orange-50 text-orange-600;
+}
+
+.summary-label {
+  @apply text-sm font-medium text-slate-500;
+}
+
+.summary-value {
+  @apply mt-2 text-3xl font-bold text-slate-900;
+}
+
+.task-panel {
+  @apply mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+
+.section-heading {
+  @apply flex flex-wrap items-center justify-between gap-3 p-5 sm:p-6;
+}
+
+.section-title {
+  @apply text-xl font-bold text-slate-900;
+}
+
+.section-subtitle {
+  @apply mt-1 text-sm text-slate-500;
+}
+
+.task-count {
+  @apply rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600;
+}
+
+.task-form {
+  @apply grid grid-cols-1 gap-4 border-b border-slate-100 px-5 pb-6 sm:px-6 md:grid-cols-2 xl:grid-cols-4;
+}
+
+.input-wrap {
+  @apply flex min-w-0 flex-col gap-2;
+}
+
+.field-label {
+  @apply text-xs font-semibold text-slate-600;
+}
+
+.task-input,
+.task-select {
+  @apply w-full min-w-0 rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-800 outline-none transition;
+}
+
+.task-input:focus,
+.task-select:focus {
+  @apply border-indigo-400 ring-2 ring-indigo-100;
+}
+
+.add-button {
+  @apply flex items-center justify-center gap-2 self-end rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700;
+}
+
+.add-button span {
+  @apply text-xl leading-none;
+}
+
+.form-error {
+  @apply px-6 pt-3 text-sm text-red-600;
+}
+
+.task-toolbar {
+  @apply flex flex-col gap-4 border-b border-slate-100 p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between;
+}
+
+.search-wrap {
+  @apply flex min-w-0 items-center gap-2 rounded-xl border border-slate-200 px-3 py-2 lg:max-w-sm lg:flex-1;
+}
+
+.search-icon {
+  @apply text-xl text-slate-400;
+}
+
+.search-input {
+  @apply min-w-0 flex-1 border-none bg-transparent py-1 text-sm outline-none placeholder:text-slate-400;
+}
+
+.filter-group {
+  @apply flex flex-wrap gap-2;
+}
+
+.filter-button {
+  @apply rounded-lg px-3 py-2 text-xs font-medium text-slate-500 transition-colors hover:bg-slate-100;
+}
+
+.filter-button.selected {
+  @apply bg-indigo-50 text-indigo-700;
+}
+
+.task-list {
+  @apply divide-y divide-slate-100;
+}
+
+.task-row {
+  @apply flex min-w-0 items-start gap-3 px-5 py-5 transition-colors hover:bg-slate-50 sm:items-center sm:px-6;
+}
+
+.task-checkbox {
+  @apply mt-1 h-4 w-4 shrink-0 cursor-pointer accent-indigo-600 sm:mt-0;
+}
+
+.task-details {
+  @apply min-w-0 flex-1;
+}
+
+.task-name {
+  @apply break-words text-sm font-semibold text-slate-800;
+}
+
+.task-name.is-completed {
+  @apply text-slate-400 line-through;
+}
+
+.task-meta {
+  @apply mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-500;
+}
+
+.category-label {
+  @apply rounded-md bg-slate-100 px-2 py-1;
+}
+
+.meta-separator {
+  @apply text-slate-300;
+}
+
+.priority-label {
+  @apply font-medium;
+}
+
+.priority-high {
+  @apply text-red-600;
+}
+
+.priority-medium {
+  @apply text-amber-600;
+}
+
+.priority-low {
+  @apply text-emerald-600;
+}
+
+.task-status {
+  @apply hidden shrink-0 rounded-full px-3 py-1 text-xs font-medium sm:inline-block;
+}
+
+.status-completed {
+  @apply bg-emerald-50 text-emerald-700;
+}
+
+.status-pending {
+  @apply bg-amber-50 text-amber-700;
+}
+
+.delete-button {
+  @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xl text-slate-400 transition-colors hover:bg-red-50 hover:text-red-600;
+}
+
+.empty-state {
+  @apply flex flex-col items-center px-5 py-12 text-center;
+}
+
+.empty-icon {
+  @apply flex h-12 w-12 items-center justify-center rounded-full bg-indigo-50 text-xl text-indigo-600;
+}
+
+.empty-state h3 {
+  @apply mt-4 font-semibold text-slate-800;
+}
+
+.empty-state p {
+  @apply mt-2 text-sm text-slate-500;
+}
+
+.task-footer {
+  @apply flex flex-col gap-3 border-t border-slate-100 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6;
+}
+
+.progress-track {
+  @apply h-2 w-full overflow-hidden rounded-full bg-slate-100 sm:max-w-48;
+}
+
+.progress-fill {
+  @apply h-full rounded-full bg-indigo-500 transition-all duration-300;
+}
+
+.footer-note {
+  @apply mt-6 text-center text-xs text-slate-400;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    @apply w-full border-b border-r-0 p-4;
+  }
+
+  .sidebar-caption {
+    @apply mt-6;
+  }
+
+  .sidebar-bottom {
+    @apply mt-6;
+  }
+
+  .main-content {
+    @apply p-4;
+  }
+
+  .task-status {
+    @apply hidden;
+  }
+}
